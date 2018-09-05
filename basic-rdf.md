@@ -42,7 +42,7 @@ multiline string""" ;
 kn example1.kn -o example2.ttl
 ```
 
-### Example 2
+### TODO Example 2
 
 ```sh
 kn example2.ttl -o example1.kn
@@ -51,6 +51,8 @@ kn example2.ttl -o example1.kn
 ## HTTP(S) IRIs
 
 For IRIs that are `http` or `https` URLs, Knotation does not require surrounding angle brackets: `<`, `>`.
+
+### File: example3.kn
 
 ```kn
 : http://example.com/subject
@@ -111,13 +113,13 @@ This can be translated into the following TriG:
   <http://example.com/predicate> "subject 3 in default graph" .
 ```
 
-### Example 3
+### TODO Example 4
 
 ```sh
 kn example4.kn -o example5.trig
 ```
 
-### Example 4
+### TODO Example 5
 
 ```sh
 kn example5.trig -o example4.kn

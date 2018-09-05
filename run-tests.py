@@ -91,10 +91,10 @@ def run_tests(command, example_file):
         errors += 1
       elif result == 'FAILURE':
         failures += 1
-      elif result == 'success':
+      elif result == 'SUCCESS':
         successes += 1
 
-  return (errors, successes, failures)
+  return (errors, failures, successes)
 
 
 def main():
@@ -130,6 +130,7 @@ def main():
   failures = 0
   successes = 0
   for example_file in example_files:
+    print('TESTING', example_file)
     e, f, s = run_tests(args.command, example_file)
     errors += e
     failures += f
