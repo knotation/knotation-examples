@@ -1,4 +1,4 @@
-#!/usr/bin/env python3 
+#!/usr/bin/env python3
 #
 # Use README files to run a series of integration tests.
 
@@ -12,11 +12,11 @@ def run_test(command, dirname, example, content, files):
 
   match = re.search('-o example(\d+)\.(\w+)', content)
   if match:
-    output = 'example' + match[1] + '.' + match[2]
+    output = 'example' + match.group(1) + '.' + match.group(2)
 
   matches = re.finditer('example(\d+)\.(\w+)', content)
   for match in matches:
-    inputs.append('example' + match[1] + '.' + match[2])
+    inputs.append('example' + match.group(1) + '.' + match.group(2))
   inputs.remove(output)
 
   path = os.path.join('results', dirname, example)
