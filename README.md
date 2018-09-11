@@ -10,7 +10,7 @@ WARNING: This is work in progress.
 - [basic RDF](basic-rdf.md): IRIs and literals
 - [prefixes](prefixes.md) and CURIEs
 - [labels](labels.md)
-- default language and datatype
+- [defaults](defaults.md) for datatypes and languages
 - context files
 - templates
 - TSV
