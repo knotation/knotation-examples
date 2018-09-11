@@ -2,7 +2,7 @@
 
 Knotation is a concrete syntax for RDF. The basic elements are IRIs, literals, and blank nodes. Literals can have a language or a datatype. Knotation also includes comments.
 
-Knotation is very similar to Turtle, and is designed to be even less verbose than Turtle overall. One aspect that is more verbose than Turtle is that when the object is an IRI or blank node (not a literal), then Knotation requires a special <https://knotation.org/datatype/link> datatype.
+Knotation is very similar to Turtle, and is designed to be even less verbose than Turtle overall. One aspect that is more verbose than Turtle is that when the object is an IRI or blank node (not a literal), then Knotation requires a special <https://knotation.org/kn/link> datatype.
 
 ### File: example1.kn
 
@@ -13,8 +13,8 @@ Knotation is very similar to Turtle, and is designed to be even less verbose tha
  multiline string
 <http://example.com/predicate>; @en-CA: language literal object
 <http://example.com/predicate>; <http://example.com/datatype>: typed literal object
-<http://example.com/predicate>; <https://knotation.org/datatype/link>: <http://example.com/object>
-<http://example.com/predicate>; <https://knotation.org/datatype/link>: _:blank-node
+<http://example.com/predicate>; <https://knotation.org/kn/link>: <http://example.com/object>
+<http://example.com/predicate>; <https://knotation.org/kn/link>: _:blank-node
 
 # Comment
 ```
@@ -61,8 +61,8 @@ http://example.com/predicate: literal object
  multiline string
 http://example.com/predicate; @en-CA: language literal object
 http://example.com/predicate; http://example.com/datatype: typed literal object
-http://example.com/predicate; https://knotation.org/datatype/link: http://example.com/object
-http://example.com/predicate; https://knotation.org/datatype/link: _:blank-node
+http://example.com/predicate; https://knotation.org/kn/link: http://example.com/object
+http://example.com/predicate; https://knotation.org/kn/link: _:blank-node
 
 # Comment
 ```
