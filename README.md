@@ -11,7 +11,7 @@ WARNING: This is work in progress.
 - [prefixes](prefixes.md) and CURIEs
 - [labels](labels.md)
 - [defaults](defaults.md) for datatypes and languages
-- context files
+- [context files](context-files.md)
 - templates
 - TSV
 - RDF lists
