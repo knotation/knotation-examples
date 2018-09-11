@@ -12,11 +12,11 @@ WARNING: This is work in progress.
 - [labels](labels.md)
 - [defaults](defaults.md) for datatypes and languages
 - [context files](context-files.md)
-- templates
-- TSV
+- [templates](templates.md)
 - RDF lists
 - OWL annotations
 - Manchester
+- TSV
 
 
 ## Test Harness
