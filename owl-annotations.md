@@ -24,7 +24,7 @@ ex:p: A
 ex:s
   ex:p "A" .
 
-_:b1
+_:b0
   rdf:type owl:Annotation ;
   owl:annotatedSource ex:s ;
   owl:annotatedProperty ex:p ;
@@ -103,5 +103,3 @@ kn example3.kn -o example4.ttl
 ```sh
 kn example4.ttl -o example3.kn
 ```
-
-  

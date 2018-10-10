@@ -14,7 +14,7 @@ Knotation is very similar to Turtle, and is designed to be even less verbose tha
 <http://example.com/predicate>; @en-CA: language literal object
 <http://example.com/predicate>; <http://example.com/datatype>: typed literal object
 <http://example.com/predicate>; <https://knotation.org/kn/link>: <http://example.com/object>
-<http://example.com/predicate>; <https://knotation.org/kn/link>: _:blank-node
+<http://example.com/predicate>; <https://knotation.org/kn/link>: _:b0
 
 # Comment
 ```
@@ -31,7 +31,7 @@ multiline string""" ;
   <http://example.com/predicate> "language literal object"@en-CA ;
   <http://example.com/predicate> "typed literal object"^^<http://example.com/datatype> ;
   <http://example.com/predicate> <http://example.com/object> ;
-  <http://example.com/predicate> _:blank-node .
+  <http://example.com/predicate> _:b0 .
 
 # Comment
 ```
@@ -62,7 +62,7 @@ http://example.com/predicate: literal object
 http://example.com/predicate; @en-CA: language literal object
 http://example.com/predicate; http://example.com/datatype: typed literal object
 http://example.com/predicate; https://knotation.org/kn/link: http://example.com/object
-http://example.com/predicate; https://knotation.org/kn/link: _:blank-node
+http://example.com/predicate; https://knotation.org/kn/link: _:b0
 
 # Comment
 ```
