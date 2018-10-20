@@ -70,21 +70,21 @@ ex:p: A
 ex:s
   ex:p "A" .
 
-_:b1
+_:b0
   rdf:type owl:Annotation ;
   owl:annotatedSource ex:s ;
   owl:annotatedProperty ex:p ;
   owl:annotatedTarget "A" ;
   ex:p "B is an annotation on A" .
 
-_:b2
+_:b1
   rdf:type owl:Annotation ;
-  owl:annotatedSource _:b1 ;
+  owl:annotatedSource _:b0 ;
   owl:annotatedProperty ex:p ;
   owl:annotatedTarget "B is an annotation on A" ;
   ex:p "C is an annotation on B" .
 
-_:b3
+_:b2
   rdf:type owl:Annotation ;
   owl:annotatedSource ex:s ;
   owl:annotatedProperty ex:p ;
