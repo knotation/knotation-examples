@@ -31,6 +31,7 @@ ex:foo-bar
   kn:applied-template """ex:template
 label: Bar""" ;
   ex:label "Foo Bar" .
+
 ```
 
 ### Example 1

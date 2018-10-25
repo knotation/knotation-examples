@@ -28,6 +28,7 @@ rdfs:label
 
 ex:foo
   rdfs:label "Foo" .
+
 ```
 
 ### Example 1
@@ -88,6 +89,7 @@ ex:child-of
 ex:bar
   rdfs:label "Bar" ;
   ex:child-of ex:foo .
+
 ```
 
 ### Example 3
@@ -101,4 +103,3 @@ kn example3.kn -o example4.ttl
 ```sh
 kn example4.ttl -o example3.kn
 ```
-

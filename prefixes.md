@@ -20,6 +20,7 @@ ex:predicate; ex:datatype: typed literal object
 ex:subject
   ex:predicate "literal object" ;
   ex:predicate "typed literal object"^^ex:datatype .
+
 ```
 
 ### Example 1
@@ -56,6 +57,7 @@ ex:predicate; kn:link: ex:object
 
 ex:subject
   ex:predicate ex:object .
+
 ```
 
 ### Example 3

@@ -30,6 +30,7 @@ _:b0
   owl:annotatedProperty ex:p ;
   owl:annotatedTarget "A" ;
   ex:p "B is an annotation on A" .
+
 ```
 
 ### Example 1
@@ -90,6 +91,7 @@ _:b2
   owl:annotatedProperty ex:p ;
   owl:annotatedTarget "A" ;
   ex:p "D is an annotation on A" .
+
 ```
 
 ### Example 3
