@@ -99,7 +99,6 @@ ex:bar
   rdfs:label "Bar" ;
   ex:child-of ex:foo ;
   ex:has-count "42"^^ex:integer .
-
 ```
 
 ### Example 1

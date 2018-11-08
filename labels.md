@@ -28,7 +28,6 @@ rdfs:label
 
 ex:foo
   rdfs:label "Foo" .
-
 ```
 
 ### Example 1
@@ -37,7 +36,7 @@ ex:foo
 kn example1.kn -o example2.ttl
 ```
 
-### TODO Example 2
+### Example 2
 
 ```sh
 kn example2.ttl -o example1.kn
@@ -89,7 +88,6 @@ ex:child-of
 ex:bar
   rdfs:label "Bar" ;
   ex:child-of ex:foo .
-
 ```
 
 ### Example 3
@@ -98,7 +96,7 @@ ex:bar
 kn example3.kn -o example4.ttl
 ```
 
-### TODO Example 4
+### Example 4
 
 ```sh
 kn example4.ttl -o example3.kn

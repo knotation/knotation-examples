@@ -15,8 +15,6 @@ Knotation is very similar to Turtle, and is designed to be even less verbose tha
 <http://example.com/predicate>; <http://example.com/datatype>: typed literal object
 <http://example.com/predicate>; <https://knotation.org/kn/link>: <http://example.com/object>
 <http://example.com/predicate>; <https://knotation.org/kn/link>: _:b0
-
-# Comment
 ```
 
 ### File: example2.ttl
@@ -32,20 +30,12 @@ multiline string""" ;
   <http://example.com/predicate> "typed literal object"^^<http://example.com/datatype> ;
   <http://example.com/predicate> <http://example.com/object> ;
   <http://example.com/predicate> _:b0 .
-
-# Comment
 ```
 
 ### Example 1
 
 ```sh
 kn example1.kn -o example2.ttl
-```
-
-### TODO Example 2
-
-```sh
-kn example2.ttl -o example1.kn
 ```
 
 ## HTTP(S) IRIs
@@ -63,15 +53,20 @@ http://example.com/predicate; @en-CA: language literal object
 http://example.com/predicate; http://example.com/datatype: typed literal object
 http://example.com/predicate; https://knotation.org/kn/link: http://example.com/object
 http://example.com/predicate; https://knotation.org/kn/link: _:b0
+```
 
-# Comment
+### Example 2
+
+```sh
+kn example3.kn -o example2.ttl
 ```
 
 ### Example 3
 
 ```sh
-kn example3.kn -o example2.ttl
+kn example2.ttl --sequential-blank-nodes -o example3.kn
 ```
+
 
 ## Named Graphs
 

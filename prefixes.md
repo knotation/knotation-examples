@@ -20,7 +20,6 @@ ex:predicate; ex:datatype: typed literal object
 ex:subject
   ex:predicate "literal object" ;
   ex:predicate "typed literal object"^^ex:datatype .
-
 ```
 
 ### Example 1
@@ -29,7 +28,7 @@ ex:subject
 kn example1.kn -o example2.ttl
 ```
 
-### TODO Example 2
+### Example 2
 
 ```sh
 kn example2.ttl -o example1.kn
@@ -57,7 +56,6 @@ ex:predicate; kn:link: ex:object
 
 ex:subject
   ex:predicate ex:object .
-
 ```
 
 ### Example 3
@@ -66,7 +64,7 @@ ex:subject
 kn example3.kn -o example4.ttl
 ```
 
-### TODO Example 4
+### Example 4
 
 ```sh
 kn example4.ttl -o example3.kn

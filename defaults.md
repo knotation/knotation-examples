@@ -91,7 +91,6 @@ ex:bar
   rdfs:label "Bar" ;
   ex:child-of ex:foo ;
   ex:has-count "42"^^ex:integer .
-
 ```
 
 ### Example 1
@@ -100,7 +99,7 @@ ex:bar
 kn example1.kn -o example2.ttl
 ```
 
-### TODO Example 2
+### Example 2
 
 ```sh
 kn example2.ttl -o example1.kn
