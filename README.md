@@ -13,12 +13,12 @@ WARNING: This is work in progress.
 - [defaults](defaults.md) for datatypes and languages
 - [context files](context-files.md)
 - [templates](templates.md)
+- [OWL annotations](owl-annotations.md)
 
 
 ## Work In Progress
 
 - RDF lists
-- [OWL annotations](owl-annotations.md)
 - Manchester
 - tables
 

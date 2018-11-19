@@ -10,8 +10,8 @@ Knotation has special support for the Web Ontology Language (OWL). OWL allows st
 @prefix ex: <http://example.com/>
 
 : ex:s
-ex:p: A
-> ex:p: B is an annotation on A
+ex:a: A
+> ex:b: B is an annotation on A
 ```
 
 ### File: example2.ttl
@@ -22,27 +22,26 @@ ex:p: A
 @prefix ex: <http://example.com/> .
 
 ex:s
-  ex:p "A" .
+  ex:a "A" .
 
 _:b0
   rdf:type owl:Annotation ;
   owl:annotatedSource ex:s ;
-  owl:annotatedProperty ex:p ;
+  owl:annotatedProperty ex:a ;
   owl:annotatedTarget "A" ;
-  ex:p "B is an annotation on A" .
-
+  ex:b "B is an annotation on A" .
 ```
 
 ### Example 1
 
 ```sh
-kn example1.kn -o example2.ttl
+kn example1.kn --sequential-blank-nodes -o example2.ttl
 ```
 
-### TODO Example 2
+### Example 2
 
 ```sh
-kn example2.ttl -o example1.kn
+kn example2.ttl --sequential-blank-nodes -o example1.kn
 ```
 
 ## Nested Annotations
@@ -55,10 +54,10 @@ kn example2.ttl -o example1.kn
 @prefix ex: <http://example.com/>
 
 : ex:s
-ex:p: A
-> ex:p: B is an annotation on A
->> ex:p: C is an annotation on B
-> ex:p: D is an annotation on A
+ex:a: A
+> ex:b: B is an annotation on A
+>> ex:c: C is an annotation on B
+> ex:d: D is an annotation on A
 ```
 
 ### File: example4.ttl
@@ -69,39 +68,38 @@ ex:p: A
 @prefix ex: <http://example.com/> .
 
 ex:s
-  ex:p "A" .
+  ex:a "A" .
 
 _:b0
   rdf:type owl:Annotation ;
   owl:annotatedSource ex:s ;
-  owl:annotatedProperty ex:p ;
+  owl:annotatedProperty ex:a ;
   owl:annotatedTarget "A" ;
-  ex:p "B is an annotation on A" .
+  ex:b "B is an annotation on A" .
 
 _:b1
   rdf:type owl:Annotation ;
   owl:annotatedSource _:b0 ;
-  owl:annotatedProperty ex:p ;
+  owl:annotatedProperty ex:b ;
   owl:annotatedTarget "B is an annotation on A" ;
-  ex:p "C is an annotation on B" .
+  ex:c "C is an annotation on B" .
 
 _:b2
   rdf:type owl:Annotation ;
   owl:annotatedSource ex:s ;
-  owl:annotatedProperty ex:p ;
+  owl:annotatedProperty ex:a ;
   owl:annotatedTarget "A" ;
-  ex:p "D is an annotation on A" .
-
+  ex:d "D is an annotation on A" .
 ```
 
 ### Example 3
 
 ```sh
-kn example3.kn -o example4.ttl
+kn example3.kn --sequential-blank-nodes -o example4.ttl
 ```
 
-### TODO Example 4
+### Example 4
 
 ```sh
-kn example4.ttl -o example3.kn
+kn example4.ttl --sequential-blank-nodes -o example3.kn
 ```
