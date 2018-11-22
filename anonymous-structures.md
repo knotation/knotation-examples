@@ -12,7 +12,7 @@ We have special syntax for some structures, such as RDF lists, OWL annotations, 
 @prefix ex: <http://example.com/>
 
 : ex:subject
-ex:predicate; kn:anon: 
+ex:predicate; kn:anon:
  ex:a: A
  ex:b: B
 ```

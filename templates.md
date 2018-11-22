@@ -9,7 +9,7 @@ Knotation includes basic templating. You define a template with the `kn:template
 @prefix ex: <http://example.com/>
 
 : ex:template
-kn:template-content: 
+kn:template-content:
  ex:label: Foo {label}
 
 : ex:foo-bar
