@@ -13,6 +13,7 @@ WARNING: This is work in progress.
 - [defaults](defaults.md) for datatypes and languages
 - [context files](context-files.md)
 - [templates](templates.md)
+- [anonymous structures](anonymous-structures.md)
 - [OWL annotations](owl-annotations.md)
 
 
