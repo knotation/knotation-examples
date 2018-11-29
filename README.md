@@ -14,12 +14,12 @@ WARNING: This is work in progress.
 - [context files](context-files.md)
 - [templates](templates.md)
 - [anonymous structures](anonymous-structures.md)
+- [lists](lists.md)
 - [OWL annotations](owl-annotations.md)
 
 
 ## Work In Progress
 
-- RDF lists
 - Manchester
 - tables
 
