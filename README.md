@@ -16,11 +16,11 @@ WARNING: This is work in progress.
 - [anonymous structures](anonymous-structures.md)
 - [lists](lists.md)
 - [OWL annotations](owl-annotations.md)
+- [Manchester syntax](manchester-syntax.md)
 
 
 ## Work In Progress
 
-- Manchester
 - tables
 
 
