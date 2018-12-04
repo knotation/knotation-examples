@@ -2,16 +2,16 @@
 
 Knotation is normally written in stanzas, each consisting of a subject line followed by one or more statement lines. Knotation also supports tables, where each subject is a row. Tables are more convenient when you have many subjects with the same pattern of predicates.
 
-Each cell value is appended to the header for its column to form a line of Knotation. If a cell is emtpy, then no Knotation output line is generated. If a header cell is empty, then that no output is generated for the cells in the column.
+We translate a table to Knotation cell-by-cell, then process the Knotation as normal. Each cell value is appended to the header value for its column to form one line of Knotation. If a cell is empty, then no Knotation line is generated for that cell. If a header cell is empty, then that no Knotation lines are generated for any of the cells in that column.
 
-A table is just a two-dimensional grid, but Knotation tables support an optional "third dimension" by allowing cells to contain multiple values separated by pipe characters `|`. This also applies to header cells.
+A TSV file consists of rows separated by newline characters, and cells separated by tab characters. We introduce one more optional level: *values* separated by pipe `|` characters. This allows each cell to contain zero (i.e. empty cell) or more values. Think of this this as an optional "third dimension" added to a two-dimensional table.
 
 We translate tables into Knotation using the following steps:
 
 - For each non-emtpy header value, we split on pipe characters to generate one or more *header values*
 - For each non-empty cell we split on pipe characters to generate one or more *cell values*
 - For each combination of header value and cell value we generate a Knotation line: header value + space + cell value + newline
-- Escaped newline, tab, and pipe characters (`\n`, `\t`, `\|`) are unescaped
+- For each Knotation line we unescape any escaped newline, tab, and pipe characters (`\n`, `\t`, `\|`)
 
 We'll consider a basic example first, then a more complex example using pipes.
 
