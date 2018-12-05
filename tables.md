@@ -9,11 +9,11 @@ A TSV file consists of rows separated by newline characters, and cells separated
 We translate tables into Knotation using the following steps:
 
 - For each non-emtpy header value, we split on pipe characters to generate one or more *header values*
-- Each header value should end with a colon `:` or semi-colon `;`; if not, a colon is appended
-- The special header value `@subject` is replaced by a colon `:`
+    - Each header value should end with a colon `:` or semi-colon `;`; if not, a colon is appended
+    - The special header value `@subject` is replaced by a colon `:`
 - For each non-empty cell we split on pipe characters to generate one or more *cell values*
 - For each combination of header value and cell value we generate a Knotation line: header value + space + cell value + newline
-- For each Knotation line we unescape any escaped newline, tab, and pipe characters (`\n`, `\t`, `\|`)
+    - We unescape any escaped newline, tab, and pipe characters (`\n`, `\t`, `\|`)
 
 We'll consider a basic example first, then a more complex example using pipes.
 
