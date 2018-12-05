@@ -9,6 +9,8 @@ A TSV file consists of rows separated by newline characters, and cells separated
 We translate tables into Knotation using the following steps:
 
 - For each non-emtpy header value, we split on pipe characters to generate one or more *header values*
+- Each header value should end with a colon `:` or semi-colon `;`; if not, a colon is appended
+- The special header value `@subject` is replaced by a colon `:`
 - For each non-empty cell we split on pipe characters to generate one or more *cell values*
 - For each combination of header value and cell value we generate a Knotation line: header value + space + cell value + newline
 - For each Knotation line we unescape any escaped newline, tab, and pipe characters (`\n`, `\t`, `\|`)
@@ -63,6 +65,22 @@ type: A
 kn -c example1.kn example2.tsv -o example3.kn
 ```
 
+# File: example2A.tsv
+
+The colons can be omitted in this header, and `@subject` can be used as the header for the first column to make it more readable. The result is the same.
+
+```tsv
+@subject	label	type
+ex:a	A	
+ex:b	B	A
+```
+
+### Example 2
+
+```sh
+kn -c example1.kn example2A.tsv -o example3.kn
+```
+
 ### File: example4.kn
 
 This context defines predicates for a more complex example.
@@ -78,6 +96,9 @@ label: value
 : ex:next
 label: next
 kn:default-datatype; kn:link: kn:link
+
+: ex:integer
+label: int
 ```
 
 ### File: example5.tsv
@@ -85,7 +106,7 @@ kn:default-datatype; kn:link: kn:link
 This more complex example shows several table features. Consider each column in turn:
 
 1. the first subject
-2. the value for the first subject
+2. the value for the first subject; the header value ends with `;` and the cell value starts with a datatype
 3. a split header generates two lines: `next: ex:b` and `: ex:b` (the second subject)
 4. a split cell generates two lines: `value: 2` and `value: 3`
 5. an OWL annotation with a multiline string using an escaped newline character `\n`
@@ -93,9 +114,13 @@ This more complex example shows several table features. Consider each column in 
 7. an indented line specifying a template value
 
 ```tsv
-:	value:	next:|:	value:	> annotation:	kn:apply-template:	 slot 1:
-ex:a	1	ex:b	2|3	multi\n line	ex:some-template	value 1
+:	value;	next|	value	> annotation	kn:apply-template	 slot 1
+ex:a	int: 1	ex:b	2|3	multi\n line	ex:some-template	value 1
 ```
+
+In column 2, ending the header with `;` means that the cell values should all start with a dataype then a colon and the object. This is useful when the cell values can have different datatypes. When the datatypes are all the same, you can either provide a default datatype for the header predicate, or include the datatype in the header explicitly, e.g. `value; int`.
+
+Split headers (as in column 3) can always be replaced by multiple columns, but then the cell value would be the same in those columns, creating some redundancy.
 
 ### File: example6.kn
 
@@ -103,7 +128,7 @@ In this example one row generates two stanzas, linked together via `ex:b`, as we
 
 ```kn
 : ex:a
-value: 1
+value; int: 1
 next: ex:b
 
 : ex:b
@@ -115,7 +140,7 @@ kn:apply-template: ex:some-template
  slot 1: value 1
 ```
 
-### Example 2
+### Example 3
 
 ```sh
 kn -c example4.kn example5.tsv -o example6.kn
