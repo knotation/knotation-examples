@@ -65,7 +65,7 @@ type: A
 kn -c example1.kn example2.tsv -o example3.kn
 ```
 
-# File: example2A.tsv
+### File: example2A.tsv
 
 The colons can be omitted in this header, and `@subject` can be used as the header for the first column to make it more readable. The result is the same.
 
