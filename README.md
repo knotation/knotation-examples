@@ -17,11 +17,12 @@ WARNING: This is work in progress.
 - [lists](lists.md)
 - [OWL annotations](owl-annotations.md)
 - [Manchester syntax](manchester-syntax.md)
+- [tables](tables.md)
 
 
 ## Work In Progress
 
-- tables
+- named graphs
 
 
 ## Test Harness
