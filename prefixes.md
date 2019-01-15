@@ -69,3 +69,40 @@ kn example3.kn -o example4.ttl
 ```sh
 kn example4.ttl -o example3.kn
 ```
+
+
+## Empty Prefix
+
+The "empty prefix" is valid.
+
+### File: example5.kn
+
+```kn
+@prefix kn: <https://knotation.org/kn/>
+@prefix : <http://example.com/>
+
+: :subject
+:predicate; kn:link: :object
+```
+
+### File: example6.ttl
+
+```ttl
+@prefix kn: <https://knotation.org/kn/> .
+@prefix : <http://example.com/> .
+
+:subject
+  :predicate :object .
+```
+
+### Example 5
+
+```sh
+kn example5.kn -o example6.ttl
+```
+
+### Example 6
+
+```sh
+kn example6.ttl -o example5.kn
+```
